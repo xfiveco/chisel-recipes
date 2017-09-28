@@ -1,10 +1,8 @@
 # Get human readable attachment size in WordPress 
 
-If you display a list of attachments with your posts or custom post types, you can display their file size and type with this short tip.
+If you display a list of attachments with your posts or custom post types, you can display their file size and type with this short recipe.
 
-First update `[your-theme]/Chisel/TwigExtensions.php`
-
-Add new method to the `TwigExtensions` class
+First update `[your-theme]/Chisel/TwigExtensions.php`, add new method to the `TwigExtensions` class
 
 ```php
 	public function getAttachmentMeta( $id ) {
@@ -44,3 +42,8 @@ Then you can use the `getAttachmentMeta` function in your Twig templates eg. `[y
 {% endif %}
 ```
 
+It will be displayed like this:
+
+![Attachment file size](attachment-file-size.png)
+
+If you need [additional details about the attachment](https://codex.wordpress.org/Function_Reference/wp_prepare_attachment_for_js), you can get them in`getAttachmentMeta` method.
