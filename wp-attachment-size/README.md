@@ -1,6 +1,6 @@
 # Get human readable attachment size in WordPress 
 
-_This recipe demonstrates how you can extend Twig with your own functions in._
+_This recipe demonstrates how you can extend Twig with your own functions._
 
 If you display a list of attachments in your posts or custom post types, you can display their file size and type like follows.
 
