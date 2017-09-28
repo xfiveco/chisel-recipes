@@ -8,10 +8,7 @@ First update `[your-theme]/Chisel/TwigExtensions.php`, add new method to the `Tw
 
 ```php
 public function getAttachmentMeta( $id ) {
-	$attachmentMeta = wp_prepare_attachment_for_js( $id );
-	$meta['size'] = $attachmentMeta['filesizeHumanReadable'];
-	$meta['type'] = $attachmentMeta['subtype'];
-	return $meta;
+	return wp_prepare_attachment_for_js( $id );
 }
 ```
 
@@ -37,7 +34,7 @@ Then you can use  `getAttachmentMeta` function in your Twig templates, eg. `[you
       {% set attachmentMeta = getAttachmentMeta(attachment.id) %}
       <li>
         <a href="{{ attachment.link }}">{{ attachment.title }}</a>
-        ({{ attachmentMeta.type|upper }}, {{ attachmentMeta.size }})
+        ({{ attachmentMeta.subtype|upper }}, {{ attachmentMeta.filesizeHumanReadable }})
       </li>
     {% endfor %}
   </ul>
@@ -48,4 +45,4 @@ Attachment type and size will be displayed like this:
 
 ![Attachment file size](attachment-file-size.png)
 
-If you need [additional details about the attachment](https://codex.wordpress.org/Function_Reference/wp_prepare_attachment_for_js), add new values to the `$meta` array in the `getAttachmentMeta` method in `TwigExtensions.php`
+Check out [additional details about the attachment](https://codex.wordpress.org/Function_Reference/wp_prepare_attachment_for_js), which you can use, for example `{{ attachmentMeta.dateFormatted }}`.
