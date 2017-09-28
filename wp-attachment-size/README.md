@@ -1,6 +1,8 @@
 # Get human readable attachment size in WordPress 
 
-If you display a list of attachments with your posts or custom post types, you can display their file size and type with this short recipe.
+_This recipe demonstrates how you can extend Twig with your own functions in Chisel._
+
+If you display a list of attachments with your posts or custom post types, you can display their file size and type like follows.
 
 First update `[your-theme]/Chisel/TwigExtensions.php`, add new method to the `TwigExtensions` class
 
