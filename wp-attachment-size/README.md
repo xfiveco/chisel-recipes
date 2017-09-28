@@ -5,25 +5,25 @@ If you display a list of attachments with your posts or custom post types, you c
 First update `[your-theme]/Chisel/TwigExtensions.php`, add new method to the `TwigExtensions` class
 
 ```php
-	public function getAttachmentMeta( $id ) {
-		$attachmentMeta = wp_prepare_attachment_for_js($id);
-		$meta['size'] = $attachmentMeta['filesizeHumanReadable'];
-		$meta['type'] = $attachmentMeta['subtype'];
-		return $meta;
-	}
+public function getAttachmentMeta( $id ) {
+	$attachmentMeta = wp_prepare_attachment_for_js($id);
+	$meta['size'] = $attachmentMeta['filesizeHumanReadable'];
+	$meta['type'] = $attachmentMeta['subtype'];
+	return $meta;
+}
 ```
 
 Register this method as a Twig function in the `registerTwigFunctions` function in the same file:
 
 ```php
-		$this->registerFunction(
-			$twig,
-			'getAttachmentMeta',
-			array(
-				$this,
-				'getAttachmentMeta',
-			)
-		);
+$this->registerFunction(
+	$twig,
+	'getAttachmentMeta',
+	array(
+		$this,
+		'getAttachmentMeta',
+	)
+);
 ```
 
 Then you can use the `getAttachmentMeta` function in your Twig templates eg. `[your-theme]/templates/single.twig`
