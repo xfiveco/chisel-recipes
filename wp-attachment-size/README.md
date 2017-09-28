@@ -1,21 +1,21 @@
 # Get human readable attachment size in WordPress 
 
-_This recipe demonstrates how you can extend Twig with your own functions in Chisel._
+_This recipe demonstrates how you can extend Twig with your own functions in._
 
-If you display a list of attachments with your posts or custom post types, you can display their file size and type like follows.
+If you display a list of attachments in your posts or custom post types, you can display their file size and type like follows.
 
 First update `[your-theme]/Chisel/TwigExtensions.php`, add new method to the `TwigExtensions` class
 
 ```php
 public function getAttachmentMeta( $id ) {
-	$attachmentMeta = wp_prepare_attachment_for_js($id);
+	$attachmentMeta = wp_prepare_attachment_for_js( $id );
 	$meta['size'] = $attachmentMeta['filesizeHumanReadable'];
 	$meta['type'] = $attachmentMeta['subtype'];
 	return $meta;
 }
 ```
 
-Register this method as a Twig function in the `registerTwigFunctions` function in the same file:
+Register this method as a Twig function in the `registerTwigFunctions` method in the same file:
 
 ```php
 $this->registerFunction(
@@ -28,7 +28,7 @@ $this->registerFunction(
 );
 ```
 
-Then you can use the `getAttachmentMeta` function in your Twig templates eg. `[your-theme]/templates/single.twig`
+Then you can use  `getAttachmentMeta` function in your Twig templates, eg. `[your-theme]/templates/single.twig`:
 
 ```twig
 {% if post.children('attachment') %}
@@ -44,8 +44,8 @@ Then you can use the `getAttachmentMeta` function in your Twig templates eg. `[y
 {% endif %}
 ```
 
-It will be displayed like this:
+Attachment type and size will be displayed like this:
 
 ![Attachment file size](attachment-file-size.png)
 
-If you need [additional details about the attachment](https://codex.wordpress.org/Function_Reference/wp_prepare_attachment_for_js), you can get them in`getAttachmentMeta` method.
+If you need [additional details about the attachment](https://codex.wordpress.org/Function_Reference/wp_prepare_attachment_for_js), add new values to the `$meta` array in the `getAttachmentMeta` method in `TwigExtensions.php`
