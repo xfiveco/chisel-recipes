@@ -8,7 +8,7 @@ Make sure you have created a project with jQuery support.
 
 ## Step by step installation
 
-####1. Install DataTables via npm
+### 1. Install DataTables via npm
 
 ```
 npm install --save-dev datatables.net datatables.net-src
@@ -16,7 +16,7 @@ npm install --save-dev datatables.net datatables.net-src
 
 **Note**: Yes, unfortunately you need two different versions. First one is for JavaScript related part. The second one is for SCSS usage.
 
-####2. JavaScript code sample
+### 2. JavaScript code sample
 
 Inside ``src/scripts`` create a file e.g. ``datatabales.js`` and use this basic code.
 
@@ -34,13 +34,13 @@ $('.js-datatable').each(function () {
 1. I'm using ``.js-datatables`` jQuery selector here. You might want to use something else.
 2. It's just a basic implementation. No extra settings passed on the initialization.
 
-####3. Include your file in the app.js
+### 3. Include your file in the app.js
 
 ```javascript
 require('./datatables');
 ```
 
-####4. (S)CSS part
+### 4. (S)CSS part
 
 Inside your ``src/styles`` create a vendor directory and create a file e.g. ``_datatables.scss`` and import the source file.
 
