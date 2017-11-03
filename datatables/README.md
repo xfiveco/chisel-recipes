@@ -57,4 +57,18 @@ Make sure the ``vendor`` directory is imported in the ``src/styles/main.scss``. 
 @import 'utilities/*';
 ```
 
-**Note**: We recommend checking the content of ``datatables.net-src/css/jquery.DataTables.scss`` inside your ``node_modules``. You may find some interesting settings there which can help you style your table.
+Here's an example of the ``vendor/_datatables.scss`` partial file:
+
+```scss
+// alter default settings
+$table-header-border: none;
+$table-paging-button-active: transparent;
+$table-paging-button-hover: transparent;
+$table-shade: transparent;
+
+@import "datatables.net-src/css/jquery.dataTables";
+
+// put your overriding below
+```
+
+**Note**: We recommend checking the content of ``datatables.net-src/css/jquery.DataTables.scss`` inside your ``node_modules``. You may find some interesting settings there which can help you style your table. Knowing the variables you can change the default look of the tables created using dataTables plugin. 
