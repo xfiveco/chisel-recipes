@@ -1,4 +1,4 @@
-# A lightbox gallery with ACF and baguetteBox.js
+# Create a lightbox gallery with ACF and baguetteBox.js
 
 _This recipe shows how to easily create a lightbox gallery in WordPress with [ACF Pro](https://www.advancedcustomfields.com/pro/) and [baguetteBox.js](https://github.com/feimosi/baguetteBox.js/)_
 
