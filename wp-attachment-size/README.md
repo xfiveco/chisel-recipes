@@ -4,7 +4,7 @@ _This recipe demonstrates how you can extend Twig with your own functions._
 
 If you display a list of attachments in your posts or custom post types, you can display their file size and type like follows.
 
-First update `[your-theme]/Chisel/TwigExtensions.php`, add new method to the `TwigExtensions` class
+First update `[your-theme]/Chisel/Extensions/Twig.php`, add new method to the `Twig` class
 
 ```php
 public function getAttachmentMeta( $id ) {
