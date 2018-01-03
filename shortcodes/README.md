@@ -2,7 +2,7 @@
 
 _This recipe demonstrates how you can use shortcodes in Chisel._
 
-Suppose you have a testimonial custom post type defined in `Chisel/Extensions/DataType.php`:
+Suppose you have a testimonial custom post type defined in `[your-theme]/Chisel/Extensions/DataType.php`:
 
 ```php
   /**
@@ -35,7 +35,7 @@ Suppose you have a testimonial custom post type defined in `Chisel/Extensions/Da
 
 You can create a page with a list of all testimonials, but you can also insert a specific testimonial on certain pages or blog posts **using a shortcode**. The shorcode can look like `[testimonial id=4]`.
 
-Create a new class `Chisel/Testimonial.php`:
+Create a new class `[your-theme]/Chisel/Testimonial.php`:
 
 ```php
 <?php
@@ -68,7 +68,7 @@ class Testimonial {
 
 First, we define shortcode, then we get testimonial post in the `testimonialShortcode` method. Next, we pass testimonial content to a Twig template and get an output using [Timber compile method](https://timber.github.io/docs/reference/timber/#compile).
 
-The Twig template in `templates\components\testimonial.twig` can look like this:
+The Twig template in `[your-theme]/templates/components/testimonial.twig` can look like this:
 
 ```twig
 {% if testimonial %}
@@ -101,7 +101,7 @@ We can add custom styling to `src/styles/components/_testimonial.scss`:
 }
 ```
 
-Finally, let's instantiate the Testimonial class in the `functions.php`:
+Finally, let's instantiate the Testimonial class in the `[your-theme]/functions.php`:
 
 ```php
 if ( \Chisel\Helpers::isTimberActivated() ) {
