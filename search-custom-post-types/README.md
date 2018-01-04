@@ -1,8 +1,8 @@
 # Search in custom post types
 
-_This recipe demonstrates how search can be expanded in Chisel so it searches in custom post types too._
+_This recipe demonstrates how search can be expanded in Chisel so it searches in custom post types._
 
-Imagine you have a custom post type _testimonial_ defined like in [this recipe](https://github.com/xfiveco/chisel-recipes/tree/master/shortcodes). You want to search in testimonials too.
+Imagine you have a custom post type _testimonial_ defined like in [this recipe](https://github.com/xfiveco/chisel-recipes/tree/master/shortcodes). You want to search in the testimonials too.
 
 Create `[your-theme]/templates/components/search.twig` template for search form and include it in your theme:
 
@@ -45,7 +45,7 @@ class Search {
 }
 ```
 
-Add post type name in the `customSearch` method.
+Add your custom post type name in the `customSearch` method.
 
 Instantiate the Search class in the `[your-theme]/functions.php`:
 
