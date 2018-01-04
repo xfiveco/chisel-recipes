@@ -96,16 +96,3 @@ Finally, import required baguetteBox CSS - create `src/styles/vendor/_lightbox.s
 ```css
 @import 'baguettebox.js/src/baguettebox.scss';
 ```
-
-and add the `vendor` folder to `src/styles/main.scss`:
-
-```css
-@import 'settings/*';
-@import 'tools/*';
-@import 'generic/*';
-@import 'elements/*';
-@import 'objects/*';
-@import 'components/*';
-@import 'utilities/*';
-@import 'vendor/*';
-```
