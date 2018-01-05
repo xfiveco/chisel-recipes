@@ -70,25 +70,19 @@ Create `src/scripts/modules/lightbox.js`:
 ```js
 import baguettebox from 'baguettebox.js';
 
-class Lightbox {
-  constructor() {
-    this.init();
-  }
-
-  init() {
-    baguettebox.run('.js-gallery');
-  }
+function lightbox() {
+  baguettebox.run('.js-gallery');
 }
 
-export default Lightbox;
+export default lightbox;
 ```
 
 and import it in `src/scripts/app.js`:
 
 ```js
-import Lightbox from './modules/lightbox';
+import lightbox from './modules/lightbox';
 
-new Lightbox();
+lightbox();
 ```
 
 Finally, import required baguetteBox CSS - create `src/styles/vendor/_lightbox.scss` with:
