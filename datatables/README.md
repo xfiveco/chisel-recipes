@@ -1,4 +1,4 @@
-# Use DataTables with Chisel
+# DataTables with Chisel
 
 [DataTables](https://datatables.net) is a popular jQuery plugin to enhance your tables functionality with dynamic sorting, filtering and much more.
 
