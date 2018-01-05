@@ -1,4 +1,4 @@
-# Get human readable attachment size in WordPress 
+# Human readable attachment size in WordPress 
 
 _This recipe demonstrates how you can extend Twig with your own functions._
 

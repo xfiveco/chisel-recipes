@@ -1,4 +1,4 @@
-# Create a lightbox gallery with ACF and baguetteBox.js
+# Lightbox gallery with ACF and baguetteBox.js
 
 _This recipe shows how to easily create a lightbox gallery in WordPress with [ACF Pro](https://www.advancedcustomfields.com/pro/) and [baguetteBox.js](https://github.com/feimosi/baguetteBox.js/)_
 
@@ -70,25 +70,19 @@ Create `src/scripts/modules/lightbox.js`:
 ```js
 import baguettebox from 'baguettebox.js';
 
-class Lightbox {
-  constructor() {
-    this.init();
-  }
-
-  init() {
-    baguettebox.run('.js-gallery');
-  }
+function lightbox() {
+  baguettebox.run('.js-gallery');
 }
 
-export default Lightbox;
+export default lightbox;
 ```
 
 and import it in `src/scripts/app.js`:
 
 ```js
-import Lightbox from './modules/lightbox';
+import lightbox from './modules/lightbox';
 
-new Lightbox();
+lightbox();
 ```
 
 Finally, import required baguetteBox CSS - create `src/styles/vendor/_lightbox.scss` with:

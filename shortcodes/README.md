@@ -1,4 +1,4 @@
-# Create a shortcode in Chisel
+# Shortcodes in Chisel
 
 _This recipe demonstrates how you can use shortcodes in Chisel._
 
