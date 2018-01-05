@@ -74,16 +74,16 @@ The Twig template for the contact form looks like follows and is stored in `[you
 
 ```twig
 <form action="{{post.link}}" method="post" id="#form">
-  <label for="cf-name" class="c-form__label">Name</label>
+  <label for="cf-name">Name</label>
   <input type="text" id="cf-name" name="cf-name" pattern="^[\p{L}0-9\s]+$" value="{{name_value}}" placeholder="Your name" required="required">
 
-  <label for="cf-email" class="c-form__label">Email</label>
+  <label for="cf-email">Email</label>
   <input type="email" id="cf-email" name="cf-email" value="{{email_value}}" placeholder="name@example.org" required="required">
 
-  <label for="cf-phone" class="c-form__label">Phone</label>
+  <label for="cf-phone">Phone</label>
   <input type="tel" id="cf-phone" pattern="[0-9 ]+" name="cf-phone" value="{{phone_value}}" placeholder="" required="required">
 
-  <label for="cf-message" class="c-form__label">Message</label>
+  <label for="cf-message">Message</label>
   <textarea name="cf-message" id="cf-message" cols="30" rows="8" placeholder="Your message" required="required">{{message_value}}</textarea>
 
   <input type="text" name="cf-s" value="" class="u-hidden">
@@ -135,5 +135,5 @@ $context = \Timber\Timber::get_context();
 
 $context['form'] = do_shortcode('[contactform]');
 
-\Timber\Timber::render( array( 'template-contact.twig', 'page.twig' ), $context );``
+\Timber\Timber::render( array( 'template-contact.twig', 'page.twig' ), $context );
 ```
