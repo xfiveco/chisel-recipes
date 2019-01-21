@@ -2,7 +2,9 @@
 
 _This recipe shows how to setup [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) in Chisel_
 
-We added two new methods to `[your-theme]/Chisel/Security.php` class to increase security of the site. `addSecureHttpHeaders` method adds common HTTP secure headers. Use `addCsp` method to set Content Security Policy directives relevant to your site.
+Add two new methods to `[your-theme]/Chisel/Security.php` class to increase security of the site. `addSecureHttpHeaders` method sets common HTTP secure headers. Use `addCsp` method to set Content Security Policy directives relevant to your site, for example in the `frame-src` directive below we allowed to embed YouTube videos.
+
+Test your site with [Observatory by Mozilla](https://observatory.mozilla.org/).
 
 ```php
 <?php
