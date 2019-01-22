@@ -76,7 +76,10 @@ class Security {
             form-action 'self';
             script-src 'self' " . implode( ' ', $scripts ) . ";";
 
-    header("Content-Security-Policy: " . trim( preg_replace( '/\s+/', ' ', $csp ) ) );
+    // Don't use CSP in WP admin
+    if ( ! is_admin() ) {
+      header("Content-Security-Policy: " . trim( preg_replace( '/\s+/', ' ', $csp ) ) );
+    }
   }
 }
 ```
